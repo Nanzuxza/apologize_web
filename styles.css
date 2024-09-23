@@ -1,0 +1,137 @@
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/sunset.jpg'); /* Ganti dengan path gambar sunset Anda */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.5); /* Layer putih dengan opacity 50% */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 430vh;
+    z-index: 1; /* Menempatkan overlay di atas background */
+}
+
+.container {
+    position: relative; /* Agar konten tetap di atas overlay */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 2; /* Menempatkan konten di atas overlay */
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.memo{
+    text-align: center;
+}
+
+h2 {
+    color: #e74c3c;
+}
+.apology {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+#modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+#modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.heart {
+    display: inline-block;
+    color: #e74c3c;
+    animation: heartbeat 1s infinite;
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.video-container {
+    width: 100%;
+    max-width: 640px;
+    margin: 20px auto;
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
