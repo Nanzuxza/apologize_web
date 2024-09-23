@@ -8,10 +8,7 @@ body {
     color: #333;
 }
 
-p{
-    color: #e74c3c;
-    text-align: center;
-}
+
 
 .overlay {
     background-color: rgba(255, 255, 255, 0.5); /* Layer putih dengan opacity 50% */
@@ -35,7 +32,10 @@ h1 {
     text-align: center;
 }
 
-
+.desc{
+    color: #e74c3c;
+    text-align: center;
+}
 .memo{
     text-align: center;
 }
