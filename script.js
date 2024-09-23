@@ -1,5 +1,4 @@
 const messages = [
-    "beberapa menit sebelum jadian wkwkwk <span class='heart'> :> </span>",
     "one of my fav moments <span class='heart'>❤️</span>",
     "Bazar pertama kita xixixxixi <span class='heart'></span>",
     "the sunset + keiza  = perfection <span class='heart'>❤️</span>",
