@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu, Cintaku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'love': {
+                            100: '#ffe6e6',
+                            200: '#ffcccc',
+                            300: '#ff9999',
+                            400: '#ff6666',
+                            500: '#ff3333',
+                            600: '#e60000',
+                            700: '#cc0000',
+                        },
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
+                        'gradient': 'gradient 15s ease infinite',
+                        'floating-hearts': 'float-y 15s ease-in-out infinite, float-x 10s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        heartbeat: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                        },
+                        gradient: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' },
+                        },
+                        'float-y': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-100px)' },
+                        },
+                        'float-x': {
+                            '0%, 100%': { transform: 'translateX(0)' },
+                            '50%': { transform: 'translateX(50px)' },
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        
+        .bg-gradient-romantic {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #9152e7, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .heart {
+            position: absolute;
+            opacity: 0.3;
+            font-size: 20px;
+            animation: float-heart 20s linear infinite;
+        }
+        
+        @keyframes float-heart {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-poppins min-h-screen bg-gradient-romantic">
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floating-hearts"></div>
+    
+    <div class="backdrop-blur-sm bg-white/20 min-h-screen">
+        <div class="container mx-auto px-4 py-12 max-w-4xl relative z-10">
+            <header class="mb-12 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">For my beloved</h1>
+                <h2 class="text-3xl md:text-4xl font-semibold text-white drop-shadow-md">Keiza Muthia Zalsabilah</h2>
+            </header>
+
+            <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 mb-12 transform transition duration-500 hover:shadow-2xl">
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-semibold text-love-600 mb-4">My Love,</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        I've been reflecting on the way I've treated you, and I realize I've hurt you in ways you never
+                        deserved. I've been unfair, allowing my own frustrations and emotions to cloud my judgment, and in doing so, I
+                        blamed you for things that were never your fault. I let my anger take over, when all you've ever done is
+                        be there for me, loving me unconditionally.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        I'm truly sorry for every time I raised my voice, for every moment I made you feel small or unimportant,
+                        yet I've been doing just that, over and over again. I know I've caused you pain, and I hate myself for
+                        it because you deserve so much better.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        I want to be better for you. I want to love you the way you deserve to be loved-patiently, kindly, and
+                        without letting my own issues get in the way. I promise to work on myself, to become the partner you
+                        need and the person I should be.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Please know that I am deeply sorry. I love you more than I can express, and I am committed to making
+                        things right, to proving that you're the most important part of my life.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        You're not just someone I love, you're the person I see myself growing old with, building a life with,
+                        and creating memories that will last a lifetime.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Every dream I have for the future includes you. I want to do all the things I've never done before, to
+                        face challenges, celebrate victories, and build a life that's full of love and happiness with you.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        I don't want anyone else but you, and I don't want to experience life's biggest moments without you by
+                        my side. I'm sorry for all the times I made you feel like you weren't enough, because the truth is, you're more
+                        than enough. You are everything to me.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        I know that saying I'll change isn't enough—I need to show you through my actions. But please believe me
+                        when I say that I'm committed to being better, not just for you, but for us. I love you with all my
+                        heart, and I want to spend the rest of my life proving that to you.
+                    </p>
+                    <p class="text-right text-gray-800 font-medium mt-8">
+                        With all my love, now and always, <br>
+                        <span class="font-bold text-love-600 text-xl">Adnan</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Our Precious Memories</h2>
+                <p class="text-love-600 italic mb-6">Tap on a photo to view</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/berkesan.jpeg" alt="Kenangan 1" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/bazar_pertama.jpeg" alt="Kenangan 2" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/samasamacantik.jpeg" alt="Kenangan 3" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/photobooth_pertama.jpeg" alt="Kenangan 4" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/lucu.jpeg" alt="Kenangan 5" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/keluarga.jpeg" alt="Kenangan 6" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/first-studydate2.jpeg" alt="Kenangan 7" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/second_photobooth.jpeg" alt="Kenangan 8" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/ultah_cece.jpeg" alt="Kenangan 9" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/panas.jpeg" alt="Kenangan 10" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
+                    <img src="/img/dingin.jpeg" alt="Kenangan 11" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="mb-12 max-w-2xl mx-auto">
+                <div class="rounded-xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 hover:shadow-2xl">
+                    <video controls poster="/api/placeholder/640/360" class="w-full h-auto">
+                        <source src="/vid/vid_studydate.mp4" type="video/mp4">
+                        Maaf, browser Anda tidak mendukung tag video.
+                    </video>
+                </div>
+            </div>
+
+            <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4 md:p-6">
+                <div class="relative w-full max-w-4xl mx-auto">
+                    <button id="close-modal" class="absolute -top-12 right-0 text-white text-4xl font-bold hover:text-gray-300 transition-colors focus:outline-none">
+                        &times;
+                    </button>
+                    <div id="modal-content" class="w-full flex justify-center"></div>
+                    <div id="caption" class="text-center text-white text-lg mt-4 px-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Create floating hearts
+        document.addEventListener('DOMContentLoaded', function() {
+            const heartsContainer = document.getElementById('floating-hearts');
+            const heartSymbols = ['❤️', '💕', '💖', '💗', '💓', '💘'];
+            const numberOfHearts = 20;
+            
+            for (let i = 0; i < numberOfHearts; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+                
+                // Randomize starting position
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = `${Math.random() * 100}%`;
+                
+                // Randomize size
+                const size = Math.random() * 1.5 + 0.5; // Between 0.5 and 2
+                heart.style.fontSize = `${size}rem`;
+                
+                // Randomize animation duration
+                const duration = Math.random() * 15 + 10; // Between 10 and 25 seconds
+                heart.style.animationDuration = `${duration}s`;
+                
+                // Randomize animation delay
+                heart.style.animationDelay = `${Math.random() * 15}s`;
+                
+                heartsContainer.appendChild(heart);
+            }
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
